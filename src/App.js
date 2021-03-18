@@ -7,23 +7,27 @@ import ClimateProvider from './context/ClimateContext'
 
 function App() {
   return (
-    <>
-      <Navigation />
-      <Switch>
-        <Route path="/thermometer">
-          <ClimateProvider>
-            <Thermometer />
-          </ClimateProvider>
-        </Route>
-        <Route path="/hygrometer">
-          <Hygrometer />
-        </Route>
-        <Route path="/">
-          <Greenhouse />
-        </Route>
-      </Switch>
-    </>
-  );
+		<>
+			<Navigation />
+			<Switch>
+				<Route path="/thermometer">
+					<ClimateProvider>
+						<Thermometer />
+					</ClimateProvider>
+				</Route>
+				<Route path="/hygrometer">
+					<ClimateProvider>
+						<Hygrometer />
+					</ClimateProvider>
+				</Route>
+				<Route path="/">
+					<ClimateProvider>
+						<Greenhouse />
+					</ClimateProvider>
+				</Route>
+			</Switch>
+		</>
+	);
 }
 
 export default App;
